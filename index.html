@@ -7,6 +7,7 @@
     <title>greenden</title>
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    
 </head>
 
 <body>
@@ -16,8 +17,8 @@
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-3xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 md:hidden cursor-pointer">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
@@ -34,6 +35,24 @@
         </ul>
     </nav>
 
+    <!-- Side navbar -->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0" style="width:45%;height:100vh;right:-50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-600">
+            <li>
+                <a class=" hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class=" hover:underline  hover:text-black" href="product.html">Products</a>
+            </li>
+            <li>
+                <a class=" hover:underline  hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>
+
+    </section>
     <!-- Header section -->
 
     <section class="bg-green-100 p-10 md:p-10 flex justify-center gap-5">
@@ -41,7 +60,7 @@
             <p class="mb-4">We offer you wide range of Artificial and natural Flowers</p>
             <h2 class="font-bold text-3xl md:text-5xl mb-5">Plants for yor Interior</h2>
             <div>
-                <button class="bg-black rounded p-2 text-white">Shop
+                <button class="bg-black rounded p-2 text-white hover:shadow-xl">Shop
                     Now</button>
                 <button class="border border-black rounded p-2 hover:shadow-xl">Watch
                     Vedio</button>
@@ -121,7 +140,7 @@
                 <h1>Flower plant</h1>
                 <p>$90</p>
             </div>
-            
+
             <div>
                 <img src="./images/plantpot1.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
                 <h1>Pot plant</h1>
@@ -138,7 +157,7 @@
                 <h1>Pot plant</h1>
                 <p>$40</p>
             </div>
-           
+
         </div>
     </section>
 
@@ -151,20 +170,20 @@
             <div class="p-3 mt-5 rounded bg-green-600">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde laboriosam esse eligendi ut,
                     necessitatibus in illum, laudantium molestias nam suscipit ipsa maxime nemo labore voluptatibus.</p>
-                <p class="font-bold">Purple</p>
+                <p class="font-bold text-yellow-300">Purple</p>
             </div>
 
             <div class="p-3 mt-5 rounded bg-green-600">
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error sit dignissimos excepturi numquam
                     maiores adipisci recusandae esse corporis enim alias id debitis a, blanditiis, ea deleniti pariatur
                     consequuntur distinctio nobis!</p>
-                <p class="font-bold">Ram</p>
+                <p class="font-bold text-yellow-300">Ram</p>
             </div>
             <div class="p-3 mt-5 rounded bg-green-600">
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error sit dignissimos excepturi numquam
                     maiores adipisci recusandae esse corporis enim alias id debitis a, blanditiis, ea deleniti pariatur
                     consequuntur distinctio nobis!</p>
-                <p class="font-bold">Sri</p>
+                <p class="font-bold text-yellow-300">Sri</p>
             </div>
         </div>
     </section>
@@ -184,12 +203,14 @@
 
     <section class="bg-green-100 ">
         <div class="p-5">
-        <h1 class="font-bold text-4xl mb-5">Greenden</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quam atque minima necessitatibus quia iusto!</p>
-        <p>@ 2021 greenden.com</p>
+            <h1 class="font-bold text-4xl mb-5">Greenden</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quam atque minima necessitatibus quia
+                iusto!</p>
+            <p>@ 2021 greenden.com</p>
         </div>
     </section>
 
 </body>
 
 </html>
+<script src="index.js"></script>

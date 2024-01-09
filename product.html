@@ -7,6 +7,7 @@
     <title>greenden</title>
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
 </head>
 
 <body>
@@ -16,8 +17,8 @@
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-3xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 md:hidden cursor-pointer">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
@@ -34,12 +35,32 @@
         </ul>
     </nav>
 
+
+    <!-- Side navbar -->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0" style="width:45%;height:100vh;right:-50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-600">
+            <li>
+                <a class=" hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class=" hover:underline  hover:text-black" href="product.html">Products</a>
+            </li>
+            <li>
+                <a class=" hover:underline  hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>
+
+    </section>
+
     <!-- Product Search -->
 
     <section class="text-center font-bold mt-5">
         <div class="grid grid-rows-2">
             <h1 class=" text-2xl mb-2 md:text-3xl">Our Products</h1>
-            <input type="search" placeholder="Search for a Products"
+            <input id="search" type="search" placeholder="Search for a Products"
                 class="border border-black p-2 focus:outline-none  ml-28 mr-28">
         </div>
     </section>
@@ -48,69 +69,70 @@
 
     <section class="p-4">
 
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-15 text-center">
+        <div id="productcontainer" class="grid grid-cols-2 md:grid-cols-4 mt-5 mb-10 gap-15 text-center">
 
             <div>
-                <img src="./images/pot_1.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
+                <img src="./images/pot_1.jpg" class="inline mt-5 hover:shadow-xl  transform hover:-translate-y-2" alt="">
                 <h1>Pot plant</h1>
                 <p>$120</p>
             </div>
             <div>
-                <img src="./images/plantpot2.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
+                <img src="./images/plantpot2.jpg" class="inline mt-5 hover:shadow-xl transform hover:-translate-y-2" alt="">
                 <h1>Money plant</h1>
                 <p>$40</p>
             </div>
             <div>
-                <img src="./images/pot_2.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
+                <img src="./images/pot_2.jpg" class="inline mt-5 hover:shadow-xl transform hover:-translate-y-2" alt="">
                 <h1>Rose plant</h1>
                 <p>$80</p>
             </div>
             <div>
-                <img src="./images/pot_4.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <img src="./images/pot_4.jpg" class="inline mt-5 hover:shadow-xl transform hover:-translate-y-2">
                 <h1>Lilly plant</h1>
                 <p>$90</p>
-            </div> 
-           
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 mb-10 gap-15 text-center">
+            </div>
+
+            <!-- </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 mt-5 mb-10 gap-15 text-center"> -->
             <div>
-                <img src="./images/plantpot3.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
+                <img src="./images/plantpot3.jpg" class="inline mt-5 hover:shadow-xl transform hover:-translate-y-2" alt="">
                 <h1>Rose plant</h1>
                 <p>$20</p>
             </div>
-            
+
             <div>
-                <img src="./images/pot_3.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <img src="./images/pot_3.jpg" class="inline mt-5 hover:shadow-xl transform hover:-translate-y-2">
                 <h1>Pot plant</h1>
                 <p>$70</p>
             </div>
             <div>
-                <img src="./images/pot_5.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
+                <img src="./images/pot_5.jpg" class="inline mt-5 hover:shadow-xl transform hover:-translate-y-2" alt="">
                 <h1>Flower plant</h1>
                 <p>$60</p>
             </div>
-            
+
             <div>
-                <img src="./images/plantpot1.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
+                <img src="./images/plantpot1.jpg" class="inline mt-5 hover:shadow-xl transform hover:-translate-y-2" alt="">
                 <h1>Pot plant</h1>
                 <p>$120</p>
             </div>
-           
+
         </div>
     </section>
 
 
-<!-- Footer -->
-     
-<section class="bg-green-100 ">
-    <div class="p-5">
-    <h1 class="font-bold text-4xl mb-5">Greenden</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quam atque minima necessitatibus quia iusto!</p>
-    <p>@ 2021 greenden.com</p>
-    </div>
-</section>
+    <!-- Footer -->
 
+    <section class="bg-green-100 ">
+        <div class="p-5">
+            <h1 class="font-bold text-4xl mb-5">Greenden</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quam atque minima necessitatibus quia
+                iusto!</p>
+            <p>@ 2021 greenden.com</p>
+        </div>
+    </section>
 
 </body>
 
 </html>
+<script src="product.js"></script>
